@@ -49,3 +49,26 @@ How to see all branch in remote repo or local repo
 
 How to get remote repo branch to our local branch with another name
 -> git checkout -b <localBranchName> <remoteName>/<remoteBranch>
+
+Fetch
+// Untuk melihat perubahan yang terjadi di remote repo
+// Fetch tidak akan mengubah isi project kita, hanya melihat saja
+
+Untuk melihat perubahan semua branch:
+-> git fetch <remoteName>
+
+Untuk melihat perubahan branch tertentu:
+-> git fetch <remoteName> <remoteBranch>
+
+(Fetch hanya 1 kali berjalan ketika fetch lagi jika tidak ada perubahan maka tidak ada respon lagi)
+
+Untuk membandingkan branch local dan branch remote, melihat perbedaannya
+-> git diff <localBranch>..<remoteName><branchRemote>
+-> git difftool <localBranch>..<remoteName><branchRemote>
+
+PULL 
+// Kita mengambil perubahan yang ada dalam remote repo untuk di masukkan ke local repo
+// Saat kita melakukan pull, secara otomatis kita akan melakukan fetch dulu
+
+-> git pull <remoteName> <remoteBranch>
+(Akan di masukkan ke branch local saat ini)
