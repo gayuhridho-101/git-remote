@@ -93,3 +93,8 @@ Untuk mengambil semua tag dari remote repo ke local repo
 begitupun sebaliknya, sehingga kita harus hapus di local sendiri, dan di remote sendiri
 )
 -> git push --delete <remoteName> <tagName>
+
+<== PULL REQUEST ==> 
+// Ketika kita membuat fitur baru biasanya kita membuat branch baru dari branch utama
+// Ketika kita ingin merge ke branch utama, kita bisa melakukan dengan Pull Request / Merge Request dahulu  
+// di GiHub ada fitur Pull Request untuk mereview otomatis di remote git, tanpa harus melakukan manual review dengan git diff
