@@ -72,3 +72,24 @@ PULL
 
 -> git pull <remoteName> <remoteBranch>
 (Akan di masukkan ke branch local saat ini)
+
+TAG
+// Ketika kita membuat tag di local ketika kita push, maka tag pada sebuah snapshot commit tidak ikut di push
+// Kita harus push tag sendiri/terpisah
+
+Untuk mengirim sebuah tag:
+-> git push <remoteName> <tagName>
+
+Untuk mengirim semua tag:
+-> git push <remoteName> --tags
+
+Untuk mengambil sebuah tag dari remote repo ke local repo:
+-> git fetch <remoteName> <tagName>
+
+Untuk mengambil semua tag dari remote repo ke local repo
+-> git fetch <remoteName>
+
+(Ketika kita menghapus sebuah tag di local, maka tag di remote repo tidak ikut terhapus
+begitupun sebaliknya, sehingga kita harus hapus di local sendiri, dan di remote sendiri
+)
+-> git push --delete <remoteName> <tagName>
