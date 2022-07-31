@@ -1,0 +1,51 @@
+Add local repo to git remote repo
+-> git init
+-> git add and commit your file
+-> git remote add origin <ssh-url>
+
+To see list of git remote
+-> git remote
+
+To see url of git remote
+-> git remote get-url <name>
+
+How to delete remote repo
+-> git  remote rm origin
+
+Rename branch master to main
+-> git branch -M main
+
+Push local file in local repo to remote repo
+-> git push <nameRemote> <localBranch>
+
+By default local branch and remote branch in name will same
+But you can change name of remote branch, when push
+-> git push <nameRemote> localbranch:remotebranch
+
+If, we hava many branch on remote, and we will push all branch on local to remote
+-> git push origin --all
+
+Delete branch on remote repo
+-> git push --delete <remoteName> <branchName>
+
+(Perlu diingat git adalah distributor VC, artinya ketika kita menghapus branch di lokal maka di branch di remote tidak otomatis terhapus.
+Begitupun sebaliknya, kita hapus branch di remote, maka di lokal tidak terhapus
+Kita perlu menghapus 1 per 1 secara manual)
+
+Clone remote project repo to local repo
+-> git clone <urlRemoteRepo>
+
+Clone with different folder name:
+-> git clone <urlRemoteRepo> <folderName>
+
+(Ketika clone dari remote project maka secara default pada repo local hanya terdapat 1 branch
+yang diambil dari branch utama di remote repo)
+
+How to see all branch in remote repo
+-> git branch -r
+
+How to see all branch in remote repo or local repo
+-> git branch -a
+
+How to get remote repo branch to our local branch with another name
+-> git checkout -b <localBranchName> <remoteName>/<remoteBranch>
